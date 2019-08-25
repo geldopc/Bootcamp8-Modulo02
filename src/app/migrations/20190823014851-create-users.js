@@ -5,7 +5,7 @@ module.exports = {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        autoIncremet: true,
+        autoIncrement: true,
         primaryKey: true,
       },
       name: {
@@ -20,7 +20,6 @@ module.exports = {
       password_hash: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
       },
       provider: {
         type: Sequelize.BOOLEAN,
