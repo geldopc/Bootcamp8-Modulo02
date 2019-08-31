@@ -28,11 +28,6 @@ module.exports = {
       canceled_at: {
         type: Sequelize.DATE,
       },
-      path: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true,
-      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
@@ -45,6 +40,6 @@ module.exports = {
   },
 
   down: queryInterface => {
-    return queryInterface.dropTable('files');
+    return queryInterface.dropTable('appointments');
   },
 };
