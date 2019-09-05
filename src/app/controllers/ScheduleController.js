@@ -1,5 +1,5 @@
 import { startOfDay, endOfDay, parseISO } from 'date-fns';
-import {Op} from 'sequelize';
+import { Op } from 'sequelize';
 import Appointment from '../models/Appointments';
 import User from '../models/User';
 
