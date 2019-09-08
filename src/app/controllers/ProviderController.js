@@ -22,12 +22,8 @@ class ProviderController {
     if (user.provider) {
       return res.status(401).json({ message: 'User is provider!' });
     }
-    const { id, name, provider } = await User.update(
-      { provider: true },
-      {
-        where: { id: user.id },
-      }
-    );
+    user.provider = true;
+    const { id, name, provider } = await user.save();
     return res.json({ id, name, provider });
   }
 }
